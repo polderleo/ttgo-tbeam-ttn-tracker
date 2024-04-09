@@ -153,10 +153,11 @@ void onEvent(ev_t event) {
 
         Serial.println(F("EV_JOINED"));
 
+        // nwkKey and artKey set by Leopold Stenger
         u4_t netid = 0;
-        devaddr_t devaddr = 0;
-        u1_t nwkKey[16];
-        u1_t artKey[16];
+        devaddr_t devaddr = 0x00FFFFFF;
+        u1_t nwkKey[16] = {0x55, 0xba, 0xff, 0x08, 0xfa, 0x75, 0x77, 0x74, 0xa1, 0x0c, 0xe7, 0xeb, 0x3f, 0xb4, 0xae, 0xf9};
+        u1_t artKey[16] = {0xe2, 0x49, 0xf1, 0xc8, 0x0e, 0x5a, 0x5e, 0xf9, 0xba, 0x7c, 0x7b, 0x57, 0x62, 0x95, 0x68, 0xa1};
         LMIC_getSessionKeys(&netid, &devaddr, nwkKey, artKey);
         Serial.print("netid: ");
         Serial.println(netid, DEC);
