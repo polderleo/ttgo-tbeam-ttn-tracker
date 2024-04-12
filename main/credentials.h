@@ -18,7 +18,7 @@ Credentials file
     static const u1_t PROGMEM APPSKEY[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42 };
     // LoRaWAN end-device address (DevAddr)
     // This has to be unique for every node
-    static const u4_t DEVADDR = 0x000004242;
+    static const u4_t DEVADDR = 0x00004242;
 
 #endif
 
